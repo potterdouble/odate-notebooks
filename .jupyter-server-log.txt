@@ -79,3 +79,85 @@ Launching jupyter-lab
 [I 2026-04-17 17:35:39.530 ServerApp] New terminal with automatic name: 1
 [W 2026-04-17 17:35:39.987 ServerApp] The websocket_ping_timeout (90000) cannot be longer than the websocket_ping_interval (30000).
     Setting websocket_ping_timeout=30000
+Launching jupyter-lab
+[W 2026-04-18 12:26:36.916 ServerApp] ServerApp.token config is deprecated in 2.0. Use IdentityProvider.token.
+[I 2026-04-18 12:26:37.145 ServerApp] jupyter_lsp | extension was successfully linked.
+[I 2026-04-18 12:26:37.145 ServerApp] jupyter_offlinenotebook | extension was successfully linked.
+[I 2026-04-18 12:26:37.145 ServerApp] jupyter_resource_usage | extension was successfully linked.
+[I 2026-04-18 12:26:37.145 ServerApp] jupyter_server_proxy | extension was successfully linked.
+[I 2026-04-18 12:26:37.148 ServerApp] jupyter_server_terminals | extension was successfully linked.
+[W 2026-04-18 12:26:37.150 LabApp] 'base_url' has moved from NotebookApp to ServerApp. This config will be passed to ServerApp. Be sure to update your config before our next release.
+[W 2026-04-18 12:26:37.150 LabApp] 'token' has moved from NotebookApp to ServerApp. This config will be passed to ServerApp. Be sure to update your config before our next release.
+[W 2026-04-18 12:26:37.150 LabApp] 'trust_xheaders' has moved from NotebookApp to ServerApp. This config will be passed to ServerApp. Be sure to update your config before our next release.
+[W 2026-04-18 12:26:37.150 LabApp] 'allow_origin' has moved from NotebookApp to ServerApp. This config will be passed to ServerApp. Be sure to update your config before our next release.
+[W 2026-04-18 12:26:37.150 LabApp] 'allow_origin_pat' has moved from NotebookApp to ServerApp. This config will be passed to ServerApp. Be sure to update your config before our next release.
+[I 2026-04-18 12:26:37.152 ServerApp] jupyterlab | extension was successfully linked.
+[I 2026-04-18 12:26:37.187 ServerApp] notebook | extension was successfully linked.
+[I 2026-04-18 12:26:37.193 ServerApp] Writing Jupyter server cookie secret to /home/jovyan/.local/share/jupyter/runtime/jupyter_cookie_secret
+[I 2026-04-18 12:26:37.378 ServerApp] notebook_shim | extension was successfully linked.
+[I 2026-04-18 12:26:37.399 ServerApp] notebook_shim | extension was successfully loaded.
+[I 2026-04-18 12:26:37.402 ServerApp] jupyter_lsp | extension was successfully loaded.
+[I 2026-04-18 12:26:37.403 ServerApp] jupyter_offlinenotebook | extension was successfully loaded.
+[I 2026-04-18 12:26:37.403 ServerApp] jupyter_resource_usage | extension was successfully loaded.
+[W 2026-04-18 12:26:37.412 ServerApp] jupyter_server_proxy | extension failed loading with message: TraitError("The 'icon_path' trait of a LauncherEntry instance expected a unicode string, not the PosixPath PosixPath('/srv/conda/envs/notebook/lib/python3.10/site-packages/jupyter_shiny_proxy/icons/shiny.svg').")
+    Traceback (most recent call last):
+      File "/srv/conda/envs/notebook/lib/python3.10/site-packages/jupyter_server/extension/manager.py", line 402, in load_extension
+        extension.load_all_points(self.serverapp)
+      File "/srv/conda/envs/notebook/lib/python3.10/site-packages/jupyter_server/extension/manager.py", line 269, in load_all_points
+        return [self.load_point(point_name, serverapp) for point_name in self.extension_points]
+      File "/srv/conda/envs/notebook/lib/python3.10/site-packages/jupyter_server/extension/manager.py", line 269, in <listcomp>
+        return [self.load_point(point_name, serverapp) for point_name in self.extension_points]
+      File "/srv/conda/envs/notebook/lib/python3.10/site-packages/jupyter_server/extension/manager.py", line 255, in load_point
+        return point.load(serverapp)
+      File "/srv/conda/envs/notebook/lib/python3.10/site-packages/jupyter_server/extension/manager.py", line 176, in load
+        return loader(serverapp)
+      File "/srv/conda/envs/notebook/lib/python3.10/site-packages/jupyter_server_proxy/__init__.py", line 45, in _load_jupyter_server_extension
+        server_processes += get_entrypoint_server_processes()
+      File "/srv/conda/envs/notebook/lib/python3.10/site-packages/jupyter_server_proxy/config.py", line 359, in get_entrypoint_server_processes
+        processes.append(ServerProcess(name=name, **server_process_config))
+      File "/srv/conda/envs/notebook/lib/python3.10/site-packages/traitlets/config/configurable.py", line 92, in __init__
+        super().__init__(**kwargs)
+      File "/srv/conda/envs/notebook/lib/python3.10/site-packages/traitlets/traitlets.py", line 1369, in __init__
+        value = self._traits[key]._cross_validate(self, getattr(self, key))
+      File "/srv/conda/envs/notebook/lib/python3.10/site-packages/traitlets/traitlets.py", line 730, in _cross_validate
+        value = obj._trait_validators[self.name](obj, proposal)
+      File "/srv/conda/envs/notebook/lib/python3.10/site-packages/traitlets/traitlets.py", line 1241, in __call__
+        return self.func(*args, **kwargs)
+      File "/srv/conda/envs/notebook/lib/python3.10/site-packages/jupyter_server_proxy/config.py", line 189, in _validate_launcher_entry
+        return LauncherEntry(**kwargs)
+      File "/srv/conda/envs/notebook/lib/python3.10/site-packages/traitlets/traitlets.py", line 1355, in __init__
+        setattr(self, key, value)
+      File "/srv/conda/envs/notebook/lib/python3.10/site-packages/traitlets/traitlets.py", line 716, in __set__
+        self.set(obj, value)
+      File "/srv/conda/envs/notebook/lib/python3.10/site-packages/traitlets/traitlets.py", line 690, in set
+        new_value = self._validate(obj, value)
+      File "/srv/conda/envs/notebook/lib/python3.10/site-packages/traitlets/traitlets.py", line 722, in _validate
+        value = self.validate(obj, value)
+      File "/srv/conda/envs/notebook/lib/python3.10/site-packages/traitlets/traitlets.py", line 2945, in validate
+        self.error(obj, value)
+      File "/srv/conda/envs/notebook/lib/python3.10/site-packages/traitlets/traitlets.py", line 831, in error
+        raise TraitError(e)
+    traitlets.traitlets.TraitError: The 'icon_path' trait of a LauncherEntry instance expected a unicode string, not the PosixPath PosixPath('/srv/conda/envs/notebook/lib/python3.10/site-packages/jupyter_shiny_proxy/icons/shiny.svg').
+[I 2026-04-18 12:26:37.415 ServerApp] jupyter_server_terminals | extension was successfully loaded.
+[I 2026-04-18 12:26:37.419 LabApp] JupyterLab extension loaded from /srv/conda/envs/notebook/lib/python3.10/site-packages/jupyterlab
+[I 2026-04-18 12:26:37.419 LabApp] JupyterLab application directory is /srv/conda/envs/notebook/share/jupyter/lab
+[I 2026-04-18 12:26:37.419 LabApp] Extension Manager is 'pypi'.
+[I 2026-04-18 12:26:37.463 ServerApp] jupyterlab | extension was successfully loaded.
+[I 2026-04-18 12:26:37.467 ServerApp] notebook | extension was successfully loaded.
+[I 2026-04-18 12:26:37.467 ServerApp] Will shut down after 600 seconds with no kernels.
+[I 2026-04-18 12:26:37.468 ServerApp] Serving notebooks from local directory: /home/jovyan
+[I 2026-04-18 12:26:37.468 ServerApp] Jupyter Server 2.17.0 is running at:
+[I 2026-04-18 12:26:37.468 ServerApp] http://jupyter-potterdouble-odate-notebooks-ejkdhxhh:8888/user/potterdouble-odate-notebooks-ejkdhxhh/lab?token=...
+[I 2026-04-18 12:26:37.468 ServerApp]     http://127.0.0.1:8888/user/potterdouble-odate-notebooks-ejkdhxhh/lab?token=...
+[I 2026-04-18 12:26:37.468 ServerApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[W 2026-04-18 12:26:37.473 ServerApp] No web browser found: Error('could not locate runnable browser').
+[I 2026-04-18 12:26:38.443 ServerApp] Skipped non-installed server(s): basedpyright, bash-language-server, dockerfile-language-server-nodejs, javascript-typescript-langserver, jedi-language-server, julia-language-server, pyrefly, pyright, python-language-server, python-lsp-server, r-languageserver, sql-language-server, texlab, typescript-language-server, unified-language-server, vscode-css-languageserver-bin, vscode-html-languageserver-bin, vscode-json-languageserver-bin, yaml-language-server
+[I 2026-04-18 12:26:38.882 ServerApp] 302 GET /user/potterdouble-odate-notebooks-ejkdhxhh/?token=[secret] (@142.126.113.86) 0.72ms
+[W 2026-04-18 12:26:41.391 ServerApp] 404 GET /user/potterdouble-odate-notebooks-ejkdhxhh/server-proxy/servers-info?1776515201081 (dab7e195bc754a5f9da9ad564fe71f50@142.126.113.86) 24.16ms referer=https://hub.2i2c.mybinder.org/user/potterdouble-odate-notebooks-ejkdhxhh/lab
+[W 2026-04-18 12:26:41.771 ServerApp] 404 GET /user/potterdouble-odate-notebooks-ejkdhxhh/api/contents/untitled.txt?content=0&hash=0&1776515201483 (dab7e195bc754a5f9da9ad564fe71f50@142.126.113.86) 2.59ms referer=https://hub.2i2c.mybinder.org/user/potterdouble-odate-notebooks-ejkdhxhh/lab
+[W 2026-04-18 12:26:41.772 ServerApp] 404 GET /user/potterdouble-odate-notebooks-ejkdhxhh/api/contents/untitled.txt?content=0&hash=0&1776515201483 (142.126.113.86): No such file or directory: untitled.txt
+[I 2026-04-18 12:26:42.770 ServerApp] New terminal with automatic name: 1
+[I 2026-04-18 12:26:42.773 LabApp] Build is up to date
+[W 2026-04-18 12:26:43.241 ServerApp] The websocket_ping_timeout (90000) cannot be longer than the websocket_ping_interval (30000).
+    Setting websocket_ping_timeout=30000
+[I 2026-04-18 12:27:21.668 ServerApp] Saving file at /exercise1.md
